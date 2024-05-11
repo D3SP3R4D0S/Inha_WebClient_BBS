@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Top from './components/Top';
 import { Container } from 'react-bootstrap';
-import Bottom from './components/Bottom';
+import Footer from './components/Footer';
 import Menu from './components/Menu';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <Container >
             <Top />
             <Menu />
-            <Bottom />
+            <Footer />
         </Container>
     );
 }
