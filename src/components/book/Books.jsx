@@ -10,6 +10,7 @@ const Books = () => {
     const db = getDatabase(app);
     const navi = useNavigate();
     const uid = sessionStorage.getItem('uid')
+    const [end, setEnd] = useState(false);
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(false);
     const [query, setQuery] = useState('리액트');
@@ -22,9 +23,9 @@ const Books = () => {
             headers:{"Authorization":"KakaoAK 00cb01fce3abc246db695150704d7a21"}
         };
         const res=await axios.get(url, config);
-        console.log(res.data);
         setBooks(res.data.documents)
         setLoading(false);
+        setEnd(res.data.meta.is_end);
     }
 
     useEffect(()=>{
@@ -39,12 +40,10 @@ const Books = () => {
 
     const onClickCart = (book) => {
         if(uid) {
-            //장바구니에 넣는 작업
             if(window.confirm(`"${book.title}"\n도서를 장바구니에 넣으시겠습니까?`)){
-                // 장바구니에 있는지부터 확인
                 get(ref(db, `cart/${uid}/${book.isbn}`)).then(snapshot=>{
                     if(snapshot.exists()){
-                        alert("이미 장바구니에 등록되어 있는 도서입니다.")
+                        alert("이미 장바구니에 등록되어 있습니다.")
                     } else {
                         set(ref(db, `cart/${uid}/${book.isbn}`), {...book});
                         alert('성공!');
@@ -89,7 +88,7 @@ const Books = () => {
             <div className='text-center my-3'>
                 <Button onClick={() => setPage(page-1)} disabled={page===1}>이전</Button>
                 <span className='mx-2'>{page}</span>
-                <Button onClick={() => setPage(page+1)}>다음</Button>
+                <Button onClick={() => setPage(page+1)} disabled={end}>다음</Button>
             </div>
         </div>
     )

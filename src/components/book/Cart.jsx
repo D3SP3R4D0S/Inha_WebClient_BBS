@@ -12,12 +12,10 @@ const Cart = () => {
     const callAPI = () => {
         setLoading(true);
         onValue(ref(db, `cart/${uid}`), snapshot=>{
-            // console.log(snapshot.key, snapshot.val());
             const rows=[];
             snapshot.forEach(row=>{
                 rows.push({key:row.key, ...row.val()});
             });
-            console.log(rows);
             setBooks(rows);
             setLoading(false);
         });
