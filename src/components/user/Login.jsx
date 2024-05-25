@@ -69,7 +69,11 @@ const Login = () => {
                                 <Form.Control name='pass' type='password' value={pass} onChange={onChange}/>
                             </InputGroup>
                             <div>
-                                <Button className='w-100' type='submit'>로그인</Button>
+                                <Row>
+                                    <Col>
+                                        <Button className='w-100' type='submit'>로그인</Button>
+                                    </Col>
+                                </Row>
                             </div>
                             <div className='text-end'>
                                 <a href="/join">회원가입</a>
