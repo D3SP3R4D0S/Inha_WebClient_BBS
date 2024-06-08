@@ -68,15 +68,15 @@ const Login = () => {
                                 </InputGroup.Text>
                                 <Form.Control name='pass' type='password' value={pass} onChange={onChange}/>
                             </InputGroup>
-                            <div>
-                                <Row>
-                                    <Col>
-                                        <Button className='w-100' type='submit'>로그인</Button>
-                                    </Col>
-                                </Row>
-                            </div>
-                            <div className='text-end'>
-                                <a href="/join">회원가입</a>
+                            <div className='text-center'>
+                                <div>
+                                    <Row>
+                                        <Col>
+                                            <Button className='w-45 px-2 me-1' type='submit'>로그인</Button>
+                                            <Button className='w-45 px-2' href="/join">회원가입</Button>
+                                        </Col>
+                                    </Row>
+                                </div>
                             </div>
                         </form>
                     </Card.Body>
