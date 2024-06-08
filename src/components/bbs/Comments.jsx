@@ -116,14 +116,14 @@ const Comments = () => {
                             </Col>
                             {email===com.email && !com.isEdit &&
                                 <Col className='text-end'>
-                                    <Button onClick={() => onClickUpdate(com.id)} size='sm' className='me-2'>수정</Button>
-                                    <Button onClick={() => onClickDelete(com.id)} size='sm' variant='danger'>삭제</Button>
+                                    <Button onClick={() => onClickUpdate(com.id)} size='sm' className='me-2 fw-bold'>수정</Button>
+                                    <Button onClick={() => onClickDelete(com.id)} size='sm' variant='danger fw-bold'>삭제</Button>
                                 </Col>
                             }
                             {email===com.email && com.isEdit &&
-                                <Col className='text-end'>
-                                    <Button onClick={() => onClickSave(com)} size='sm' variant='success' className='me-2'>저장</Button>
-                                    <Button onClick={() => onClickCancel(com)} size='sm' variant='secondary'>취소</Button>
+                                <Col className='text-end mb-2'>
+                                    <Button onClick={() => onClickSave(com)} size='sm' variant='success' className='me-2 fw-bold'>저장</Button>
+                                    <Button onClick={() => onClickCancel(com)} size='sm' variant='secondary' className={'fw-bold'}>취소</Button>
                                 </Col>
                             }
                         </Row>

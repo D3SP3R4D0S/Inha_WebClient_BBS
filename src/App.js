@@ -7,7 +7,7 @@ import Menu from './components/Menu';
 
 function App() {
     return (
-        <Container >
+        <Container style={{backgroundColor: '#ffffff', minHeight:"100vh"}} >
             <Top />
             <Menu />
             <Footer />

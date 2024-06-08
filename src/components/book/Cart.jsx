@@ -33,10 +33,10 @@ const Cart = () => {
         callAPI();
     }, [])
 
-    if(loading) return <h1 className='my-5'>로딩중입니다....</h1>
+    if(loading) return <h1 className='my-5 fw-bold'>로딩중...</h1>
     return (
         <div>
-            <h1 className='my-5'>장바구니</h1>
+            <h1 className='my-5 fw-bold'>장바구니</h1>
             <Table>
                 <thead>
                 <tr>

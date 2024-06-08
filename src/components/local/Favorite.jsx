@@ -33,10 +33,10 @@ const Favorite = () => {
         callAPI();
     }, []);
 
-    if(loading) return <h1 className='my-5'>로딩중입니다...</h1>
+    if(loading) return <h1 className='my-5 fw-bold'>로딩중...</h1>
     return (
         <div>
-            <h1 className='my-5'>즐겨찾기</h1>
+            <h1 className='my-5 fw-bold'>즐겨찾기</h1>
             <Table striped bordered hover>
                 <thead>
                 <tr className='text-center'>

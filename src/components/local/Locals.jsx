@@ -63,10 +63,10 @@ const Locals = () => {
         callAPI();
     }, [page]);
 
-    if(loading) return <h1 className='my-5'>로딩중...</h1>
+    if(loading) return <h1 className='my-5 fw-bold'>로딩중...</h1>
     return (
         <div>
-            <h1 className='my-5'>지역검색</h1>
+            <h1 className='my-5 fw-bold'>지역검색</h1>
             <Row className='mb-2'>
                 <Col xs={8} md={6} lg={4}>
                     <form onSubmit={onSubmit}>

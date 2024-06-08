@@ -45,9 +45,9 @@ const ListPage = () => {
     }, [page])
 
     return (
-        <Row className='my-5 justify-content-center'>
+        <Row className='my-5 justify-content-center w-100'>
             <Col xs={12} md={10} lg={8}>
-                <h1 className='mb-5'>게시글목록</h1>
+                <h1 className='mb-5 fw-bold'>게시글목록</h1>
                 {uid &&
                     <div className='text-end'>
                         <a href='/bbs/insert'>
@@ -55,11 +55,11 @@ const ListPage = () => {
                         </a>
                     </div>
                 }
-                <Table>
-                    <thead>
+                <Table style={{width:"100%"}}>
+                    <thead style={{width:"100%"}}>
                     <tr>
                         <td>No.</td>
-                        <td>Title</td>
+                        <td className="w-50">Title</td>
                         <td>Writter</td>
                         <td>Date</td>
                     </tr>

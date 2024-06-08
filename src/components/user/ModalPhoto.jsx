@@ -51,14 +51,14 @@ const ModalPhoto = ({setLoading, form, setForm}) => {
         <>
             <img src={form.photo || 'http://via.placeholder.com/80x80'} style={style} onClick={handleShow} alt={"profile image"}/>
             <Modal
-                style={{top:'30%'}}
+                style={{top:'30%', backdropFilter:'blur(3px)'}}
                 show={show}
                 onHide={handleClose}
                 backdrop="static"
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>사진변경</Modal.Title>
+                    <Modal.Title className={'fw-bold'}>사진변경</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className='text-center'>
                     <img src={fileName || 'http://via.placeholder.com/200x200'} style={style1} alt={"profile image"}/>

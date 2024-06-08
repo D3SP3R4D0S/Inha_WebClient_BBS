@@ -30,13 +30,13 @@ const ReadPage = () => {
     }, []);
 
     return (
-        <Row className='my-5 justify-content-center'>
+        <Row className='my-5 justify-content-center' style={{width:"100%"}}>
             <Col xs={12} md={10} lg={8}>
-                <h1>게시글정보</h1>
+                <h1 className={'fw-bold'}>게시글정보</h1>
                 {loginEmail === email &&
                     <div className='text-end mb-2'>
-                        <Button variant='success' size='sm' className='me-2' onClick={() => navi(`/bbs/update/${id}`)}>수정</Button>
-                        <Button variant='danger' size='sm' onClick={onClickDelete}>삭제</Button>
+                        <Button variant='success' size='sm' className='me-2 fw-bold' onClick={() => navi(`/bbs/update/${id}`)}>수정</Button>
+                        <Button variant='danger' size='sm' className={'fw-bold'} onClick={onClickDelete}>삭제</Button>
                     </div>
                 }
                 <Card>

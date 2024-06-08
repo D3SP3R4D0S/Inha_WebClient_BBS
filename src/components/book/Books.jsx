@@ -13,7 +13,7 @@ const Books = () => {
     const [end, setEnd] = useState(false);
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [query, setQuery] = useState('리액트');
+    const [query, setQuery] = useState('비빔밥');
     const [page, setPage] = useState(1);
 
     const callAPI = async() => {
@@ -56,10 +56,10 @@ const Books = () => {
         }
     }
 
-    if(loading) return <h1 className='my-5'>로딩중입니다...</h1>
+    if(loading) return <h1 className='my-5 fw-bold'>로딩중...</h1>
     return (
         <div>
-            <h1 className='my-5'>도서검색</h1>
+            <h1 className='my-5 fw-bold'>도서검색</h1>
             <Row className='mb-2'>
                 <Col xs={8} md={6} lg={4}>
                     <form onSubmit={onSubmit}>
