@@ -48,7 +48,7 @@ const Login = () => {
 
     if(loading) return <h1 className='my-5 fw-bold'>로딩중입니다...</h1>
     return (
-        <Row className='my-5 justify-content-center'>
+        <Row className='my-5 justify-content-center w-100'>
             <Col md={6} lg={4}>
                 <Card>
                     <Card.Header>

@@ -49,7 +49,7 @@ const Mypage = () => {
 
     if(loading) return <h1 className='text-center my-5 fw-bold'>로딩중...</h1>
     return (
-        <Row className='justify-content-center my-5'>
+        <Row className='justify-content-center my-5 w-100'>
             <Col xs={12} md={10} lg={8}>
                 <Card>
                     <Card.Header>
