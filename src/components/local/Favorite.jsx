@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { app } from '../../firebaseInit'
 import { getDatabase, ref, onValue, remove } from 'firebase/database'
 import { Table, Button } from 'react-bootstrap'
+import Local from "./Local";
 
 const Favorite = () => {
     const [loading, setLoading] = useState(false);
@@ -43,7 +44,8 @@ const Favorite = () => {
                     <td>ID</td>
                     <td>장소명</td>
                     <td>주소</td>
-                    <td>전화</td>
+                    <td>전화번호</td>
+                    <td>지도확인</td>
                     <td>취소</td>
                 </tr>
                 </thead>
@@ -54,7 +56,8 @@ const Favorite = () => {
                         <td>{local.place_name}</td>
                         <td>{local.road_address_name}</td>
                         <td>{local.phone}</td>
-                        <td><Button onClick={()=>onClickDelete(local)}>취소</Button></td>
+                        <td><Local local={local}/></td>
+                        <td><Button onClick={() => onClickDelete(local)}>취소</Button></td>
                     </tr>
                 )}
                 </tbody>

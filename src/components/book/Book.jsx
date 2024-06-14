@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-const Book = ({book}) => {
+const Book = ({book, width}) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -14,7 +14,7 @@ const Book = ({book}) => {
             <img src={book.thumbnail? book.thumbnail:'https://via.placeholder.com/120x174'}
                  onClick={handleShow}
                  style={{cursor:'pointer'}}
-                 width='90%'/>
+                 width={width}/>
 
             <Modal
                 show={show}

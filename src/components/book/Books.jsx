@@ -76,7 +76,7 @@ const Books = () => {
                     <Col key={book.isbn} xs={6} md={3} lg={2} className='mb-2'>
                         <Card>
                             <Card.Body className='justify-content-center d-flex'>
-                                <Book book={book}/>
+                                <Book book={book} width={"90%"}/>
                             </Card.Body>
                             <Card.Footer>
                                 <div className='ellipsis'>{book.title}</div>

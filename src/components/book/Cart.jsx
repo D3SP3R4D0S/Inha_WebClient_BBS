@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { app } from '../../firebaseInit'
 import { getDatabase, onValue, ref, remove } from 'firebase/database'
 import { Table, Button } from 'react-bootstrap'
+import Book from "./Book";
 
 const Cart = () => {
     const [loading, setLoading] = useState(false);
@@ -49,7 +50,7 @@ const Cart = () => {
                 <tbody>
                 {books.map(book=>
                     <tr key={book.isbn}>
-                        <td><img src={book.thumbnail} width="30px"/></td>
+                        <td><Book book={book} width={"30px"}/></td>
                         <td>{book.title}</td>
                         <td>{book.price}</td>
                         <td>{book.authors}</td>
