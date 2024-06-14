@@ -1,7 +1,7 @@
-@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 * {
-  font-family: "NanumSquare", sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
