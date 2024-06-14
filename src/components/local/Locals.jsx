@@ -4,6 +4,7 @@ import { Table, Row, Col, InputGroup, Form, Button } from 'react-bootstrap'
 import {app} from '../../firebaseInit'
 import {getDatabase, ref, set, get} from 'firebase/database'
 import { useNavigate } from 'react-router-dom'
+import Local from "./Local";
 
 const Locals = () => {
     const navi = useNavigate();
@@ -84,6 +85,7 @@ const Locals = () => {
                     <td>장소명</td>
                     <td>주소</td>
                     <td>전화번호</td>
+                    <td>지도확인</td>
                     <td>즐겨찾기</td>
                 </tr>
                 </thead>
@@ -94,7 +96,8 @@ const Locals = () => {
                         <td>{local.place_name}</td>
                         <td>{local.road_address_name}</td>
                         <td>{local.phone}</td>
-                        <td><Button onClick={()=>onClickFavorite(local)}>즐겨찾기</Button></td>
+                        <td><Local local={local}/></td>
+                        <td><Button onClick={() => onClickFavorite(local)}>즐겨찾기</Button></td>
                     </tr>
                 )}
                 </tbody>
